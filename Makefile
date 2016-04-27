@@ -14,4 +14,7 @@ install:
 
 clean:
 	@rm -rf $(GOBIN)
+
+run:
+	$(GOCMD) run $(SOURCES)
 	
