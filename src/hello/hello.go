@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main(){
-	fmt.Printf("Turkey pesto sandwich is really good!\n")
+	fmt.Printf("What would you like to do tonight?!\n")
 }
