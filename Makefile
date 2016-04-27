@@ -1,15 +1,16 @@
 SOURCEDIR=`pwd`
 SOURCES := $(shell find $(SOURCEDIR) -name '*.go')
 GOBIN=$(SOURCEDIR)/bin
+GOCMD=/usr/local/go/bin/go
 
 
 build:
-	go build $(SOURCES)
+	$(GOCMD) build $(SOURCES)
 
 install:
 	@mkdir -p $(GOBIN)
 	GOBIN=$(GOBIN) \
-	go install $(SOURCES)
+	$(GOCMD) install $(SOURCES)
 
 clean:
 	@rm -rf $(GOBIN)
