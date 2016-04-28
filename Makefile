@@ -4,6 +4,8 @@ BASENAME := $(shell find $(SOURCEDIR) -name '*.go' -exec basename {} .go \;)
 GOBIN=$(SOURCEDIR)/bin
 GOCMD=/usr/local/go/bin/go
 
+TESTDIR=$(SOURCEDIR)/tests
+TESTSCRIPT=$(SOURCEDIR)/tests/test.sh
 
 build:
 	$(GOCMD) build $(SOURCES)
@@ -19,7 +21,5 @@ clean:
 run:
 	$(GOCMD) run $(SOURCES)
 
-test:
-	$(GOBIN)/$(BASENAME)
-
-	
+buildtest:
+	cd $(TESTDIR); ./test.sh
