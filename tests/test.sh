@@ -3,7 +3,7 @@ TESTSTRING="panda"
 echo $TESTSTRING
 ../bin/simpleWebSvr &
 /bin/sleep 5
-curl -s http://localhost:8085/$TESTSTRING | grep $TESTSTRING
+curl -s http://localhost:8088/$TESTSTRING | grep $TESTSTRING
 if [ $? -eq 0 ] 
 then	
 	echo "Test Passed."
